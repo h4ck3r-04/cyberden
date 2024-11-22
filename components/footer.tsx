@@ -27,9 +27,14 @@ const Footer = () => {
         <footer className="flex flex-col px-8 py-16 w-full">
             <div className="grid min-h-[300px] grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-8">
                 <div className="mb-8 md:mb-6 lg:mb-2 col-span-2">
-                    <h1 className="text-lg text-gray-50/70 font-thin mb-4 uppercase tracking-[0.4em]">
+                    <h1 className="text-lg text-gray-50/70 font-thin mb-1 uppercase tracking-[0.4em]">
                         CyberDen
                     </h1>
+                    <p className="uppercase tracking-widest mb-2 text-[10px] text-gray-50/70">Subscribe to our Newsletter.</p>
+                    <form className="grid grid-cols-4 mb-2 border-[0.2px] rounded-md text-xs h-[40px] tracking-widest">
+                        <input type="text" name="email" placeholder="Email" className="col-span-3 bg-transparent px-2 outline-none"></input>
+                        <button type="submit" className="col-span-1 bg-white text-black">Subscribe</button>
+                    </form>
                     <ul className="flex flex-row text-gray-50/70 space-x-2">
                         <li><GithubIcon /></li>
                         <li><XIcon /></li>

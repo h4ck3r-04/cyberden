@@ -48,7 +48,7 @@ const Header = (): JSX.Element => {
             {/* Header */}
             <div
                 ref={headerRef}
-                className="w-full bg-blur-lg shadow-lg backdrop-blur-lg"
+                className="w-full bg-black bg-opacity-95 bg-blur-lg shadow-lg backdrop-blur-lg"
             >
                 <div className="w-full px-4 py-2 flex justify-end items-center">
                     <button
@@ -94,7 +94,7 @@ const Header = (): JSX.Element => {
             {/* Dropdown Menu */}
             <div
                 ref={dropdownRef}
-                className={`absolute top-full left-0 right-0 bg-blur-lg bg-opacity-95 backdrop-blur-lg transform transition-all duration-300 ease-in-out shadow-xl ${open
+                className={`absolute top-full left-0 right-0 bg-black bg-blur-lg bg-opacity-95 backdrop-blur-lg transform transition-all duration-300 ease-in-out shadow-xl ${open
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 -translate-y-4 pointer-events-none'
                     }`}

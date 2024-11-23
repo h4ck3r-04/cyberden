@@ -3,31 +3,26 @@ const navigation = [
         title: "Company",
         links: [
             {
-                title: "Home",
-                href: "/",
-                description: "Explore our homepage to learn about our mission and values."
-            },
-            {
-                title: "About",
+                title: "About Us",
                 href: "/about",
-                description: "Learn more about our company, history, and team."
+                description: "Learn more about our story, mission, and the people behind our vision."
             },
             {
-                title: "Resources",
-                href: "/resources",
-                description: "Access our curated resources and tools for your needs."
+                title: "Master Plan",
+                href: "/master-plan",
+                description: "Discover our roadmap and the strategic goals we aim to achieve."
             },
             {
-                title: "Community",
-                href: "/community",
-                description: "Engage with our vibrant community of users and contributors."
+                title: "Culture",
+                href: "/culture",
+                description: "Understand our values, work culture, and what drives our team."
             },
             {
-                title: "News",
-                href: "/news",
-                description: "Stay up-to-date with the latest company announcements and updates."
+                title: "Motivation",
+                href: "/motivation",
+                description: "Explore the inspiration and passion that fuel our journey."
             },
-        ],
+        ]
     },
     {
         title: "Resources",
@@ -92,8 +87,14 @@ const navigation = [
                 href: "/release-notes",
                 description: "View detailed updates and changes in our latest releases."
             },
+            {
+                title: "News",
+                href: "/news",
+                description: "Stay informed with the latest updates, announcements, and events."
+            },
         ],
-    },
+    }
+
 ];
 
 export default navigation;

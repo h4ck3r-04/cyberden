@@ -27,7 +27,7 @@ const Footer = () => {
         <footer className="flex flex-col px-8 py-16 w-full">
             <div className="grid min-h-[300px] grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-8">
                 <div className="mb-8 md:mb-6 lg:mb-2 col-span-2">
-                    <h1 className="text-lg text-gray-50/70 font-thin mb-1 uppercase tracking-[0.4em]">
+                    <h1 className="text-lg text-foreground font-light mb-1 uppercase tracking-widest">
                         CyberDen
                     </h1>
                     <p className="uppercase tracking-widest mb-2 text-[10px] text-gray-50/70">Subscribe to our Newsletter.</p>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import navigation from "@/data/navigation";
-import { GithubIcon, XIcon } from "./icons";
+import { GithubIcon, LinkedInIcon, XIcon, DiscordIcon } from "./icons";
 
 const FooterSection = ({ title, links }: { title: string; links: { title: string, href: string }[] }) => (
     <div className="mb-8 md:mb-6 lg:mb-2">
@@ -12,7 +12,7 @@ const FooterSection = ({ title, links }: { title: string; links: { title: string
                 <li key={index} className="my-2">
                     <Link
                         href={link.href}
-                        className="uppercase tracking-[0.2em] hover:text-gray-300"
+                        className="tracking-widest hover:text-gray-300"
                     >
                         {link.title}
                     </Link>
@@ -31,13 +31,15 @@ const Footer = () => {
                         CyberDen
                     </h1>
                     <p className="uppercase tracking-widest mb-2 text-[10px] text-gray-50/70">Subscribe to our Newsletter.</p>
-                    <form className="grid grid-cols-4 mb-2 border-[0.2px] rounded-md text-xs h-[40px] tracking-widest">
+                    <form className="grid grid-cols-4 mb-2 border-[0.2px] rounded-md text-xs h-[40px] tracking-wide md:tracking-widest">
                         <input type="text" name="email" placeholder="Email" className="col-span-3 bg-transparent px-2 outline-none"></input>
                         <button type="submit" className="col-span-1 bg-white text-black">Subscribe</button>
                     </form>
                     <ul className="flex flex-row text-gray-50/70 space-x-2">
                         <li><GithubIcon /></li>
                         <li><XIcon /></li>
+                        <li><DiscordIcon /></li>
+                        <li><LinkedInIcon /></li>
                     </ul>
                 </div>
                 {navigation.map((section, index) => (

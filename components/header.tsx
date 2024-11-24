@@ -107,7 +107,7 @@ const Header = (): JSX.Element => {
                                 {navigation.map((section) => (
                                     <li
                                         key={section.title}
-                                        className={`my-2 uppercase tracking-[0.2em] cursor-pointer transition-colors hover:text-gray-300 ${activeSection === section.title
+                                        className={`my-2 uppercase tracking-widest cursor-pointer transition-colors hover:text-gray-300 ${activeSection === section.title
                                             ? "text-gray-300"
                                             : "text-gray-50/70"
                                             }`}
@@ -131,7 +131,7 @@ const Header = (): JSX.Element => {
                                             className="block transition-colors hover:text-gray-300"
                                             onClick={closeMenu}
                                         >
-                                            <p className="uppercase tracking-[0.2em] text-gray-50">
+                                            <p className="tracking-widest text-gray-50">
                                                 {link.title}
                                             </p>
                                             {link.description && (
@@ -156,11 +156,11 @@ const Header = (): JSX.Element => {
                                     {section.links.map((link, linkIndex: number) => (
                                         <li
                                             key={linkIndex}
-                                            className="my-3"
+                                            className="my-1"
                                         >
                                             <Link
                                                 href={link.href}
-                                                className="block uppercase tracking-[0.2em] text-gray-50 hover:text-gray-300 transition-colors"
+                                                className="block tracking-widest text-gray-50 hover:text-gray-300 transition-colors"
                                                 onClick={closeMenu}
                                             >
                                                 {link.title}

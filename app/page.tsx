@@ -1,5 +1,6 @@
 import Link from "next/link";
 import navigation from "@/data/navigation";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -10,14 +11,26 @@ export default function Home() {
           <h1 className="text-5xl md:text-8xl lg:text-9xl text-[#ededed]">CyberDen</h1>
         </div>
         <p className="lg:py-4 w-3/4 md:w-2/3 lg:1/2 text-[10px] md:text-sm lg:text-md font-light uppercase text-white row-span-3 lg:row-span-2">We proudly engineer innovative tools and resources specifically tailored for hackers, crafted by experienced professionals who understand the unique challenges of the community, empowering you to enhance your skills and push the boundaries of what&apos;s possible in the world of hacking.</p>
-        <div className="row-span-7 md:row-span-8 grid grid-cols-4 md:grid-cols-8 gap-2">
+        <div className="row-span-7 md:row-span-8 md:grid hidden md:grid-cols-10 gap-2">
           {navigation
             .find((section) => section.title === "Company")
             ?.links.map((link, index: number) => {
               return (
                 <Link key={index} href={link.href} className="col-span-2 bg-[#ededed] text-[#090909] px-2 py-3 flex flex-col justify-between">
                   <p>{link.title}</p>
-                  <h1 className="text-right text-5xl md:text-7xl lg:text-9xl">0{index + 1}</h1>
+                  <h1 className="text-right md:text-7xl lg:text-9xl">0{index + 1}</h1>
+                </Link>
+              )
+            })}
+        </div>
+        <div className="row-span-7 md:row-span-8 grid grid-rows-5 md:hidden gap-2">
+          {navigation
+            .find((section) => section.title === "Company")
+            ?.links.map((link, index: number) => {
+              return (
+                <Link key={index} href={link.href} className="row-span-1 bg-[#ededed] text-[#090909] px-2 py-3 flex flex-col justify-between">
+                  <p>{link.title}</p>
+                  <h1 className="text-right text-4xl">0{index + 1}</h1>
                 </Link>
               )
             })}
@@ -28,15 +41,15 @@ export default function Home() {
         Learn how to create custom solutions tailored to your needs and enhance your knowledge with educational content
         from our Academy.
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 min-h-[600px] my-4 md:my-6 lg:my-8 gap-2 ">
-        <div className="col-span-2 py-3 px-2">Resources</div>
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 min-h-[600px] my-4 md:my-6 lg:my-8 gap-2">
+        <div className="col-span-2 py-3 px-2 border-[0.2px] border-[#ededed] text-foreground">Resources</div>
         {navigation
           .find((section) => section.title === "Resources")
           ?.links.map((link, index: number) => {
             return (
               <Link key={index} href={link.href} className="col-span-2 bg-[#ededed] text-[#090909] px-2 py-3 flex flex-col justify-between">
                 <p>{link.title}</p>
-                <h1 className="text-right text-5xl md:text-7xl lg:text-9xl">0{index + 1}</h1>
+                <h1 className="text-right text-4xl md:text-7xl lg:text-9xl">0{index + 1}</h1>
               </Link>
             )
           })}
@@ -46,15 +59,15 @@ export default function Home() {
         Discover opportunities to connect with like-minded individuals, contribute to impactful projects, and be part of initiatives that
         shape the future of our community.
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 min-h-[400px] my-4 md:my-6 lg:my-8 gap-2 ">
-        <div className="col-span-2 py-3 px-2">Community</div>
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 min-h-[400px] my-4 md:my-6 lg:my-8 gap-2 ">
+        <div className="col-span-1 lg:col-span-2 py-3 px-2 border-[#ededed] border-[0.2px] text-[#ededed]">Community</div>
         {navigation
           .find((section) => section.title === "Community")
           ?.links.map((link, index: number) => {
             return (
-              <Link key={index} href={link.href} className="col-span-2 bg-[#ededed] text-[#090909] px-2 py-3 flex flex-col justify-between">
+              <Link key={index} href={link.href} className="col-span-1 lg:col-span-2 bg-[#ededed] text-[#090909] px-2 py-3 flex flex-col justify-between">
                 <p>{link.title}</p>
-                <h1 className="text-right text-5xl md:text-7xl lg:text-9xl">0{index + 1}</h1>
+                <h1 className="text-right text-4xl md:text-7xl lg:text-9xl">0{index + 1}</h1>
               </Link>
             )
           })}
@@ -64,15 +77,31 @@ export default function Home() {
         Explore detailed release notes to keep track of our latest features and improvements, and stay informed with news, announcements,
         and events shaping our journey forward.
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-4 min-h-[400px] my-4 md:my-6 lg:my-8 gap-2 ">
-        <div className="col-span-1 py-3 px-2">News</div>
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 min-h-[400px] my-4 md:my-6 lg:my-8 gap-2 ">
+        <div className="col-span-1 lg:col-span-2 py-3 px-2 border-[#ededed] border-[0.2px] text-[#ededed]">News</div>
         {navigation
           .find((section) => section.title === "News")
           ?.links.map((link, index: number) => {
             return (
-              <Link key={index} href={link.href} className="col-span-1 bg-[#ededed] text-[#090909] px-2 py-3 flex flex-col justify-between">
+              <Link key={index} href={link.href} className="col-span-1 lg:col-span-2 bg-[#ededed] text-[#090909] px-2 py-3 flex flex-col justify-between">
                 <p>{link.title}</p>
-                <h1 className="text-right text-5xl md:text-7xl lg:text-9xl">0{index + 1}</h1>
+                <h1 className="text-right text-4xl md:text-7xl lg:text-9xl">0{index + 1}</h1>
+              </Link>
+            )
+          })}
+      </div>
+      <p className="lg:py-4 w-3/4 md:w-2/3 lg:1/2 text-[10px] md:text-sm lg:text-md font-light uppercase text-white">
+        Stay connected with the open-source community through our blog, where we share insights, updates, and contributions from industry experts and project maintainers. Explore detailed release notes to track the latest features, improvements, and bug fixes, and stay informed about important announcements, upcoming events, and the progress of our open-source journey.
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-8 min-h-[400px] my-4 md:my-6 lg:my-8 gap-2 ">
+        <div className="col-span-1 lg:col-span-2 py-3 px-2 border-[#ededed] border-[0.2px] text-[#ededed]">Open Source</div>
+        {navigation
+          .find((section) => section.title === "Open Source")
+          ?.links.map((link, index: number) => {
+            return (
+              <Link key={index} href={link.href} className="col-span-1 lg:col-span-2 bg-[#ededed] text-[#090909] px-2 py-3 flex flex-col justify-between">
+                <p>{link.title}</p>
+                <h1 className="text-right text-4xl md:text-7xl lg:text-9xl">0{index + 1}</h1>
               </Link>
             )
           })}

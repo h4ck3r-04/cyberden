@@ -22,6 +22,11 @@ const navigation = [
                 href: "/motivation",
                 description: "Explore the inspiration and passion that fuel our journey."
             },
+            {
+                title: "FAQ",
+                href: "/faq",
+                description: "Find answers to common questions about our platform, services, and more."
+            },
         ]
     },
     {
@@ -58,20 +63,15 @@ const navigation = [
         title: "Community",
         links: [
             {
-                title: "Forum",
-                href: "/forum",
-                description: "Join discussions and share your knowledge with the community."
+                title: "Forums",
+                href: "/forums",
+                description: "Join dedicated forums for engaging discussions and networking with experts."
             },
             {
-                title: "Events",
+                title: "Events & Webinars",
                 href: "/events",
-                description: "Find out about upcoming community events and gatherings."
-            },
-            {
-                title: "Contribute",
-                href: "/contribute",
-                description: "Get involved and contribute to our projects and initiatives."
-            },
+                description: "Explore upcoming events, webinars, and conferences related to cybersecurity."
+            }
         ],
     },
     {
@@ -83,18 +83,52 @@ const navigation = [
                 description: "Read articles and insights from our team and guest writers."
             },
             {
-                title: "Release Notes",
-                href: "/release-notes",
-                description: "View detailed updates and changes in our latest releases."
-            },
-            {
                 title: "News",
                 href: "/news",
                 description: "Stay informed with the latest updates, announcements, and events."
             },
         ],
+    },
+    {
+        title: "Open Source",
+        links: [
+            {
+                title: "Projects",
+                href: "/projects",
+                description: "Explore open-source projects that you can contribute to or use."
+            },
+            {
+                title: "Contribute",
+                href: "/contribute",
+                description: "Get involved in open-source development and help improve our projects."
+            },
+            {
+                title: "Licensing",
+                href: "/licensing",
+                description: "Understand the licensing and terms for using and contributing to our open-source projects."
+            },
+        ]
+    },
+    {
+        title: "Legal",
+        links: [
+            {
+                title: "Privacy Policy",
+                href: "/privacy-policy",
+                description: "Understand how we handle and protect your personal information."
+            },
+            {
+                title: "Terms of Service",
+                href: "/terms-of-service",
+                description: "Read the terms and conditions governing the use of our platform and services."
+            },
+            {
+                title: "Cookie Policy",
+                href: "/cookie-policy",
+                description: "Learn about our use of cookies and how they improve your experience."
+            },
+        ]
     }
-
 ];
 
 export default navigation;
